@@ -1,0 +1,28 @@
+
+.brand-text {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 37px;
+  margin-right: 40px; 
+}
+
+@media (max-width: 768px) {
+  
+  .brand-text {
+    font-size: 24px; 
+    margin-right: 20px;
+  }
+
+
+  .navbar-nav {
+    margin-right: 20px;
+  }
+
+  .nav-item .DotsVerticalIcon {
+    z-index: 999; 
+  }
+  
+  .navbar-nav:last-child {
+    margin-left: 20px;
+  }
+}

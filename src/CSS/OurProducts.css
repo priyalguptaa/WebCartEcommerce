@@ -1,0 +1,37 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightgray; /* Changed to light gray */
+    padding: 10px 20px;
+  }
+  
+  .highlight {
+    margin: 0; /* Remove margin from the h1 */
+    padding: 0; /* Remove padding from the h1 */
+  }
+  
+  .options {
+    display: flex;
+    gap: 20px; /* Space between options */
+  }
+  
+  .options span {
+    cursor: pointer;
+  }
+  
+  .options span:hover {
+    color: blue;
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .highlight {
+      font-size: 24px;
+    }
+  
+    .options span {
+      margin-left: 10px;
+    }
+  }
+  

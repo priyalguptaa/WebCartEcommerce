@@ -1,0 +1,10 @@
+.parent-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; 
+  }
+  .cart-slice {
+    margin-bottom: 20px; 
+  }
+  
+  
