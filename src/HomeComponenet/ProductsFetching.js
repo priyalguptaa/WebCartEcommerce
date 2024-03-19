@@ -1,23 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { RiShoppingCartFill, RiHeartFill } from 'react-icons/ri';
 import productsData from '../HomeComponenet/Products.json'; 
 import '../CSS/ProductFetching.css';
+import StarRating from './StarRating';
 
 const ProductFetching = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // Commented out API fetching code
-    // const fetchProducts = async () => {
-    //   try {
-    //     const response = await axios.get('API_URL');
-    //     setProducts(response.data);
-    //   } catch (error) {
-    //     console.error('Error fetching products:', error);
-    //   }
-    // };
-    // fetchProducts();
-
-    // Set products using mock data
     setProducts(productsData);
   }, []);
 
@@ -25,8 +15,13 @@ const ProductFetching = () => {
     console.log('Product added to cart:', product);
   };
 
+  const handleAddToWishlist = (product) => {
+    console.log('Product added to wishlist:', product);
+  };
+
   const handleViewDescription = (productId) => {
     console.log('View description for product:', productId);
+    
   };
 
   return (
@@ -34,14 +29,15 @@ const ProductFetching = () => {
       {products.map((product) => (
         <div key={product.id} className="product-card">
           <div className="product-info">
-            <img src={product.image} alt={product.name} className="product-image" />
-            <h2>{product.name}</h2>
-            <p>{product.description}</p>
-            <p>{product.price}</p>
-          </div>
-          <div className="buttons">
-            <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
-            <button onClick={() => handleViewDescription(product.id)}>Description</button>
+            <div className="product-hover">
+            <RiShoppingCartFill className="icon" onClick={() => handleAddToCart(product)} fill="#FFA500" />
+            <RiHeartFill className="icon" onClick={() => handleAddToWishlist(product)} fill="#FFA500" />
+
+            </div>
+            <img src={product.image} alt={product.name} className="product-image" onClick={() => handleViewDescription(product.id)} />
+            <h2 className="product-name">{product.name}</h2>
+            <StarRating/>
+            <div className="product-price">{product.price}</div>
           </div>
         </div>
       ))}

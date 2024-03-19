@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import { API_BASE_URL } from "../HomeComponenet/apiConfig";
+import { API_BASE_URL, API_BASE_URL_CUS } from "../HomeComponenet/apiConfig";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -72,7 +72,7 @@ const SignUp = () => {
         },
       };
 
-      const response = await axios.post(`${API_BASE_URL}/signup`, payload);
+      const response = await axios.post(`${API_BASE_URL_CUS}/signup`, payload);
 
       if (response.status === 200) {
         const { uid } = response.data;

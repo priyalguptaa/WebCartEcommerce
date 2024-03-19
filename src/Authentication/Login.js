@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import { API_BASE_URL } from "../HomeComponenet/apiConfig";
+import { API_BASE_URL_CUS } from "../HomeComponenet/apiConfig";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ const Login = () => {
           email: formData.email,
           password: formData.password,
         };
-        const response = await axios.post(`${API_BASE_URL}/login`, {
+        const response = await axios.post(`${API_BASE_URL_CUS}/login`, {
           customer,
         });
   

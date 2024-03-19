@@ -1,0 +1,18 @@
+.star-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .star-filled {
+    color: yellow; /* Yellow color for filled stars */
+  }
+  
+  .star-half {
+    color: yellow; /* Yellow color for half star */
+  }
+  
+  .star-empty {
+    color: #ddd; /* Light gray color for empty stars */
+  }
+  

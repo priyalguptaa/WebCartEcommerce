@@ -6,6 +6,7 @@ import Header from '../HomeComponenet/Header';
 import OurProducts from '../HomeComponenet/OurProducts';
 import '../CSS/HomePage.css'
 import ProductFetching from './ProductsFetching';
+// import Pagination from './Pagination';
 const HomePage = () => {
   return (
     <div>
@@ -15,6 +16,7 @@ const HomePage = () => {
       <CartSlice className='cart-slice'/>
       <OurProducts/>
       <ProductFetching/>
+      {/* <Pagination/> */}
     </div>
   );
 };
